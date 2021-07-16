@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container" style="padding-left:300px; width:auto; height:auto;">
+        <img src="resimler/MISAFIR_YORUM_slider.gif" class="img-fluid" />
+        <br />
+        <h3 style="color:red;">Elektraweb Misafir Yorum Sitelerinin Entegrasyonu</h3>
+        <br />
+        <p>
+            Aylık 260 milyon tekil kullanıcıya sahip olan, dünyanın en büyük seyahat sitesi TripAdvisor’dan otelinize direkt link alır, hem satışlarınızı artırır hem de müşterilerinizin otelliniz hakkında yorum ve tanıtım yazıları yazmasına yardımcı olursunuz.
+        </p>
+        <br />
+        <p>
+            TripConnect, TripAdvisor profilinizde ve işletmenizin bulunduğu bölge arama sonuçlarında fiyatlarınızı ve doluluk durumunuzu gösterme konusunda size destek sağlar. TripConnect bağlantınız Çevrimiçi Seyahat Acenteleri’nin bağlantılarının yanında görünür ve gezginleri doğrudan çevrimiçi rezervasyon sayfanıza göndererek gelirleri arttırma konusunda size inanılmaz bir fırsat verir.
+        </p>
+        <br />
+        <ul>
+            <li>Oteliniz hakkındaki yorum ve tanıtım yazılarının web sitenizde görünür olmasını sağlayın</li>
+            <li>Tripadvisor gibi seyahat yorum sitelerinden web sitenize direkt link alın</li>
+
+        </ul>
+
+
+
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

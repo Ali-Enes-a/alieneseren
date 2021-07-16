@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+    <div class="container" style="padding-left:200px;">
+
+        <div style="height:20px; width:auto;"></div>
+        <div style="height:auto; width:auto; background-color:snow;">
+            <img src="resimler/E_FATURA_slider.gif" class="img-fluid" />
+            <br />
+            <h3 style="color:red;"><b>DİJİTAL DÖNÜŞÜM e-FATURA, e-ARŞİV ve e-DEFTER İLE BAŞLAR</b></h3><br /><br />
+            <b>Otelinizin “Dijital Dönüşüm” sürecinizi Elektra ile yönetebilirsiniz.</b>
+            <p>e-Fatura, e-Defter ve e-Arşiv modülümüz ile finansal operasyonlarınızı yasaya uygun olarak kolaylıkla gerçekleştirebilirsiniz.</p>
+            <br /><br />
+            <h4 style="color:red;">KİMLER e-FATURA KAPSAMINDADIR?</h4>
+            <p>20.06.2015 tarihli ve 29392 sayılı Resmi Gazete’de yayımlanan 454 Sıra No.lu Vergi Usul Kanunu Genel Tebliğinde aşağıda sayılan mükelleflere elektronik defter tutma ve e-fatura uygulamasına geçme zorunluluğu getirilmiştir.</p>
+            <ul>
+                <li>2018 hesap dönemi brüt satış hasılatı (veya satışları ile gayrisafı iş hasılatı) 10 Milyon TL ve üzeri olan mükellefler 1/1/2020 tarihinden itibaren e-Fatura uygulamasına geçmek zorundadır.</li>
+                <li>2018 veya 2019 hesap dönemleri brüt satış hasılatı (veya satışları ile gayrisafı iş hasılatı) 5 Milyon TL ve üzeri olan mükellefler 1/7/2020 tarihinden itibaren e-Fatura uygulamasına geçmek zorundadır</li>
+                <li>2020 veya müteakip hesap dönemleri brüt satış hasılatı (veya satışları ile gayrisafı iş hasılatı) 5 Milyon TL ve üzeri olan mükellefler ilgili hesap dönemini izleyen yılın yedinci ayının başından itibaren, eFatura uygulamasına geçmek zorundadır</li>
+                <li>e-İrsaliye uygulamasına geçiş zorunluluğu nedeniyle e-Fatura uygulamasına geçmek zorunda olanlar e-İrsaliye uygulamasına geçiş zorunluluğunun başladığı tarihte eFatura uygulamasına geçmek zorundadır</li>
+                <li>e-Arşiv Fatura uygulamasına geçiş zorunluluğu nedeniyle e-Fatura uygulamasına geçmek zorunda olanlar e-Arşiv Fatura uygulamasına geçiş zorunluluğunun başladığı tarihte eFatura uygulamasına geçmek zorundadır</li>
+            </ul><br />
+            <hr />
+            <br />
+            <h4 style="color:red;">e-DEFTER NEDİR?</h4>
+            <p>Şekil hükümlerinden bağımsız olarak Vergi Usul Kanununa ve/veya Türk Ticaret Kanununa göre tutulması zorunlu olan defterlerde yer alması gereken bilgileri kapsayan elektronik kayıtlar bütünüdür.</p>
+            <br />
+            <h4 style="color:red;">KİMLER e-DEFTER KAPSAMINDADIR?</h4>
+            <p> e-Fatura uygulamasına geçiş zorunluluğu bulunan mükellefler;</p>
+            <ul>
+                <li>e-Fatura uygulamasına geçiş süresi içinde (e-Fatura uygulamasına yıl içinde zorunlu olarak geçen mükellefler bakımından izleyen yılın başından itibaren ), 2018 yada 2019 yılı hasılatı 5.000.000 TL yi geçenler 01.01.2021 tarihinden itibaren. (e-Fatura’ya geçişi 1/7/2020-yıl içine rastlayan bir tarih olduğu için) </li>
+                <li>2018 yılı hasılatı 10.000.000 TL yi geçenler 01.01.2020 tarihinden itibaren</li>
+                <li>2018 yılında internet üzerinden mal ve hizmet satışı yapan ve brüt satış hasılatı 5 Milyon TL ve üzerinde olan mükellefler 1.1.2020 tarihinden itibaren  e-Defter uygulamasını kullanmak zorundadır</li>
+            </ul>
+            <br />
+            <hr />
+            <br />
+            <h4 style="color:red;">e-ARŞİV NEDİR?</h4>
+            <img src="resimler/e-arsiv_calisma.jpg" class="img-fluid" />
+            <p>e-Fatura mükellefi olmayan gerçek ve tüzel kişilere, 433 sıra numaralı Vergi Usul Kanunu Genel Tebliğinde yer alan şartlara uygun olarak elektronik ortamda fatura düzenlenmesine ve faturanın 2. nüshasının elektonik ortamda saklanabilmesine imkan sağlayan uygulamadır.</p><br /><br />
+            <h4 style="color:red;">KİMLER e-ARŞİV KAPSAMINDADIR?</h4>
+            <ul>
+                <li>E-Fatura Uygulamasına Zorunlu veya İsteğe Bağlı olarak Dâhil Olan/Olacak Olan Mükellefler ( E Fatura mükellefi olmayanlara düzenlenecek faturalar) e-Arşiv uygulamasına geçmek zorundadır. Hali hazırda e-Fatura uygulamasına dahil olanlar 1.1.2020‘de, 1.1.2020’den sonra e-Fatura uygulamasına dahil olanlar ise e-Fatura uygulamasına geçilen tarihte e-Arşiv uygulamasına geçişlerini tamamlamalıdır</li>
+                <li>İnternet üzerinden mal ve hizmet satışı yapan ve 2015 ve müteakip hesap dönemlerinde brüt satış hasılatları 5 Milyon TL ve üzerinde olan mükellefler ilgili hesap dönemine ilişkin gelir veya kurumlar vergisi beyannamesinin verileceği tarihi takip eden hesap döneminin başına kadar e-Arşiv uygulamasına geçmek zorundadır. İnternet satış yapan ve 2018 yılında 5 milyon TL ve üzerinde hasılat elde edenler 1/1/2020 tarihinden itibaren e-Arşiv uygulamasına geçmek zorundadır</li>
+                <li>e-Arşiv Fatura uygulamasına dahil olmayan mükelleflerce, 1/1/2020 tarihinden itibaren vergi mükellefi olmayanlara düzenlenecek faturaların, vergiler dahil toplam tutarı 30 Bin TL’yi aşanlar faturalarını e-Arşiv Fatura olarak GİB Portallerı üzerinden düzenleyebilecekleri gibi e-Arşiv uygulamasına da geçebilirler</li>
+                <li> e-Arşiv Fatura uygulamasına dahil olmayan mükelleflerce, 1/1/2020 tarihinden itibaren vergi mükelleflerine düzenlenecek faturaların, vergiler dahil toplam tutarı 5 Bin TL’yi aşanlar faturalarını e-Arşiv Fatura olarak GİB Portallerı üzerinden düzenleyebilecekleri gibi e-Arşiv uygulamasına da geçebilirler</li>
+            </ul><br /><br />
+            <h3 style="color:red;">e-ARŞİV SİSTEMİNE NASIL DAHİL OLABİLİRSİNİZ?</h3>
+            <img src="resimler/earsiv2.jpg" class="img-fluid" />
+            <p><b>Faturalarınızı Fiziksel Ortamda Saklamaya Son:</b> Faturalarınızı kağıt olarak saklama ve fatura yığınları arasından aradığınızı bulma derdiniz ortadan kalkar. Aynı zamanda faturalarınızın fiziksel yıpranmalarını engellemiş ve çok daha güzenli bir ortamda saklamış olursunuz</p>
+            <br />
+            <p><b>Müşteri Memnuniyetini Arttırır:</b> Son tüketici aldığı malı iade etmek isterse kendisine email olarak iletilen faturanın bir çıktısını alıp iadeye ilişkin bölümü doldurması ve ürün ile birlikte satın aldığı yere göndermesi yeterli olacaktır.</p>
+        </div>
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

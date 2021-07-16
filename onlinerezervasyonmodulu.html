@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container" style="padding-left:300px; padding-top:10px; width:auto; height:auto;">
+        <div style="height:20px; width:auto;"></div>
+        <div style="height:auto; width:auto; background-color:snow;">
+
+            <img src="resimler/ONLINE_REZ_slider.gif" class="img-fluid" />
+            <center><h3 style="color:red;">ElektraWeb Online Rezervasyon Motoru</h3></center>
+            <br /><br />
+            <b><h5>Otelinizi Kendi Web Sitenizden Dünyaya Açın, Karlı Satın!</h5></b>
+            <br />
+            <ul>
+                <li>ElektraWeb, otel misafirleri ve seyahat acentelerine yönelik, webde ve mobil olarak kullanılabilen, ön büroya entegre edilmiş bir online rezervasyon motoruna sahiptir. Grup ve zincir otellerde, merkezi rezervasyon sistemi(CRS), online rezervasyon motoru olarak kullanılabilir.</li>
+                <br />
+                <a href="https://www.elektraweb.com/elektraweb-online-rezervasyon-kullanim-rehberi/"><button type="button" class="btn btn-lg btn-primary" style="width:600px; text-align:center;">ElektraWeb Online Rezervasyon Kullanım Rehberi için Tıklayınız</button></a>
+                <br />
+                <br />
+                <a href="https://www.elektraweb.com/elektrawebte-kanal-baglantisi-rehberi/"><button type="button" class="btn btn-lg btn-primary" style="width:600px; text-align:center;">Elektraweb Kanal Bağlantısı Rehberi için Tıklayınız</button></a>
+                <br />
+                <br />
+                <center><img src="resimler/Screen-Shot-2020-01-20-at-09.45.50.png" class="img-fluid" /></center>
+                <br />
+                <br />
+                <h4><b>Komisyonsuz, Aracısız Satış İmkanı</b></h4>
+                <br />
+                <ul>
+                    <li><b>Online Rezervasyon modülü</b> ile satışlarınızı doğrudan müşterilerinize yapın ve komisyon ödemeyin. Ayrıca tahsilatı da doğrudan müşterilerinizden ve peşin olarak yapın.</li>
+                    <li><b>ElektraWeb Online Rezervasyon Modülünü</b> kullanan otel, kendi resmi web sitesi üzerinden rezervasyon alır, anlık olarak önbüro yönetim sistemine bağlanıp müsaitlik sorgular rezervasyonu kaydeder ve aynı anda misafire konfirmasyon verir.</li>
+                    <li><b>Online rezervasyon sayfası</b> internette otel adına bilinirlik sağlar, otelin marka değerini yükseltir ve CRM veritabanı oluşturur. Bu bilgiler bir başka acenteyla veya rakiple paylaşılmak zorunda kalınmaz. Böylece <b>Kendi Markanıza ve CRM Sisteminize Yatırım Yapmış olursunuz.</b></li>
+                    <li><b>ElektraWeb’in entegre edilmiş ödeme sistemi PCI ve DSS sertifikalıdır. Güvenli online kredi kartı ve debit kart ödemeleri alabilirsiniz.</b></li>
+                    <li>Sistem yerinde ödeme + Yerinde Depozit + Kredi Kartı + Taksit + Puan Kullanımı gibi farklı ödeme şekillerini desteklemektedir.</li>
+                    <br />
+                    <b><h6>Sanal POS Entegrasyonu</h6></b>
+
+                    <li>İster kendi sanal POS’unuzu, isterseniz bizim sanal POS‘umuzu kullanın. Sanal POS‘umuz tüm bankalarla çalışmakta ve cazip komisyon oranları ile taksitli satış yapabilmenize imkan sağlamaktadır.</li>
+                </ul>
+                <br />
+                <ul type="square">
+                    <li>
+                        <b>Kolay Kullanım</b><br /> hızlı, kolay ve pratik arayüzü vardır.
+
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Günlük Doluluk ve Fiyat Bilgisi</b><br />Her oda için toplam fiyatın yanı sıra günlük doluluk ve fiyatı da verir.
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>İndirim Oranı ve Tutarı Gösterir</b><br />Fiyatları indirim oranı ile birlikte normal ve indirimli olarak bir arada gösterir.
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Alternatif Fiyat Listeleme</b><br />Aynı oda tipinin değişik fiyatlarını ve indirimleri ayrıca listeler.
+
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Tüm İşlemler Tek Sayfada</b><br />Tek Adımda Rezervasyon Olanağı Sağlar
+
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Çoklu Rezervasyon</b><br />Tek seferde rezervasyonda değişik tarih ve oda tiplerinden çoklu rezervasyon yapılabilir.
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Çoklu Ödeme Opsiyonu</b><br />değişik ödeme Opsiyonları Sunar.
+
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Kredi Kartı Taksit ve Puan Kullanımı</b><br />Kredi Kartlarını tanır , puan kullanır, taksit yapabilir.
+
+
+                    </li>
+                    <hr />
+
+                    <li><b>Email ve SMS İle Bilgilendirme</b><br />Rezervasyon yapıldığında SMS ve Email ile bildirim yapar.</li>
+                    <hr />
+
+                    <li>
+                        <b>Uçak Transfer ve Extra</b><br />Uçak ve Transfer Opsiyonunu Sunar
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Çoklu Dil ve Para Birimi</b><br />Sınırsız Dil ve Para birimi seçeneğinden istediklerinizi seçebilirsiniz.
+
+
+                    </li>
+                    <hr />
+
+                    <li>
+                        <b>Kurumsal Kimliğe Uygun Tasarım</b><br />Görünümü (İçerik, Renk,font,tema,ark fon, logo vb ) otele özel hale getirilebilir.
+
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Esnek Veri Girişi</b><br />Adres kimlik vb bilgilerden hangisinin isteneceği otel tarafından özelleştirilebilir.
+
+
+                    </li>
+                    <li><b>Interaktif Kullanım</b><br />Rezervasyon esnasında online sohbet, tıkla konuş, beni ara formu ile müşteri ile irtibatta kalır; talebi SMS ile anında otele ildirir.</li>
+                    <hr />
+                    <li><b>SMS ile Rezervasyon Onayı</b><br />Rezervasyon tamamlanmadığı takdirde otele SMS ile anında bildirim yapar.</li>
+                    <hr />
+                    <li>
+                        <b>Sosyal Medya İle Entegre</b><br />Sosyal Medyadaki sayfalarınızla bağlantı sağlar.
+
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Haritadan Adres Tarifi</b><br />Google harita üzerinden adres tarifi sağlar.
+
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Masaüstü ve Mobil Uyumlu</b><br />Responsive yapısı sayesinde tüm cihazlardan erişim sağlanır. ( Google verilerine göre Rezervasyonların %70 ‘i mobil platformlardan gelmektedir.)
+
+
+                    </li>
+                    <hr />
+                    <li><b>Dokunmatik İçin özel Dizayn</b><br />Dokunmatik kullanıma uygun bir yapısı vardır. Seçenekler liste yerine parmakla dokunarak rahatlıkla seçimi yapabilecek butonlar şeklindedir.</li>
+                    <hr />
+                    <li><b>Özel Web Adresi</b><br />Her otele kendi adında bir web adresi verir. Oteladi.rezervasyonal.com şeklinde.</li>
+                    <hr />
+                    <li>
+                        <b>Yorum Sitesi Entegrasyonu</b><br />En iyi yorum sitelerinin yorumlarını online rezervasyon sayfanızda gösterebilirsiniz.
+
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Tasarlanabilen Ek Sayfalar</b><br />Ek özel sayfalar veya Factsheetler oluşturulabilir tanıtımlar yapabilirsiniz.
+
+
+                    </li>
+                    <hr />
+                    <li><b>Popup</b><br />İlk girişte otomatik çıkacak Popup ekranlar oluşturabilirsiniz.</li>
+                    <li>
+                        <b>Kolay Kullanım</b><br />Extranet’in yönetimi çok kolay ve pratiktir. 10 dakikada kayıt yapıp, kendi alan adınızda satışa başlayabilirsiniz.
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Kolay Kullanım</b><br />Extranet’in yönetimi çok kolay ve pratiktir. 10 dakikada kayıt yapıp, kendi alan adınızda satışa başlayabilirsiniz.
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Kontrat Kullanımı</b><br />Kontrat ile günlük fiyatlandırmayı  bir arada kullanabilirsiniz.
+                        Kontratlar sayesinde online rezervasyon sisteminde yapamayacağınız bir çok özelliğe sahip olursunuz.
+                        örneğin değişik rezervasyon yaptırma tarihleri için farklı fiyatlar verilebilir.
+                        Değişik şekilde konaklamalar için (7=6, 14=12 , Balayı vb) özel indirimler sağlanabilir.
+                        Geriye dönük olarak gelen rezervasyonların fiyatları kontrol edilebilir.
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Günlükten Fiyat Girişi</b><br />İstediğiniz güne özel fiyatı günlükten girebilirsiniz.
+
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Esnek Satış Kuralları</b><br />Günlük ekranından her gün için Stop, MinLOS, MaxLOS,  CTA, CTD gibi özellikler tanımlayabilirsiniz.
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>İndirim ve Kampanya Tanımları</b><br />İstediğiniz özelliklerde indirimler tanımlayabilirsiniz. örneğin 60 gün öncesinden yapılan rezervasyonlarda %15 indirim veya günlük yapılan rezervasyonda saat 22:00 dan sonrası için %50 indirim gibi.
+
+                    </li>
+                    <hr />
+                    <li>
+                        <b>Promosyon Yönetimi</b><br />Müşterilerinize özel promosyon kodları oluşturabilirsiniz. Bu promosyonlar her müşteriye özel olabildiği gibi, belli bir süre ve adede kadar tanımlanarak genel olarak da kullanılabilir. Email veya reklamlarla dağıtılabilir.
+
+
+                    </li>
+                    <hr />
+                    <li><b>Acente Satış Sistemi</b><br />Acente ve kurumlarınıza özel fiyat ve ödeme şekli tanımlayıp, login olmaları için şifre gönderebilirsiniz. Böylece birçok acenteye fiyat ve müsaitlik hakkında size dönmeden 7 gün 24 saat garantilii rezervasyon yaptırma şansınız olacaktır.</li>
+                    <hr />
+                    <li><b>Web Sayfası Rezervasyon Butonu</b><br />Web sitenizin önyüzüne koymak için değişik görünüm ve fonksiyonlarda bir çok arama formu seçeneği sunar. (Widget)</li>
+                    <hr />
+                </ul>
+                <br />
+                <br />
+                <ul type="i">
+                    <li><b>Markete Göre Fiyatlandırma</b><br />IP ye göre farklı pazarlara farklı fiyatlar verilebilirsiniz. Kaç market yaratacağınıza, bu marketlere hangi ülkeleri dahil edeceğinize siz karar verin. İsterseniz bazı marketlerde bazı oda tiplerini veya tüm satışınızı kapatabilirsiniz.</li>
+                    <li><b>Kanal Yönetimi</b><br />Tek tuşla birçok online kanalı aynı anda güncelleyebilir; isterseniz online kanallara farklı fiyat ve doluluk gönderebilirsiniz.</li>
+                    <li><b>Facebook’tan Satış</b><br />Facebook sayfanıza yerleştireceğiniz online rezervasyon sayfası sayesinde sosyal medyadan rezervasyon alabilirsiniz.</li>
+                    <li><b>Seo</b><br />Seo ayarlarınızı yapabilir, Google Analitiycs gibi platformlarla verilerinizi entegre edebilirsiniz.</li>
+                    <li><b>Rezervasyon için Müsaitlik</b><br />Rezervasyon için müsaitlik yok ise farklı tarihlere yönlendirme yapabilirsiniz.</li>
+                    <li><b>Sözleşmeler</b><br />İstediğiniz sözleşmeyi ekleyebilirsiniz ( KVKK, Gizlilik …vb)</li>
+                    <li><b>Özel Fiyat Tanımlamaları</b><br />B2B ve B2C Acentelere ve Corporate Müşterilere özel indirimli fiyat tanımlayabilirsiniz ve misafire promosyonlu fiyat linki gönderebilirsiniz.</li>
+                    <li><b>Upsell ve Cross-sell Teknolojisi</b><br />Upsell ve Cross-sell teknolojisi ile tek bir rezervasyondan maximum gelir imkanı</li>
+                    <li><b>Bonus Ve Sadakat Sistemi</b><br />Misafirlerinizin tekrar geliş sayısını arttırmak ve onları daha yakından tanımak için Sadakat Yönetimi ile kampanyalar düzenleyebilir ve puan kazanmalarını sağlayabilirsiniz.</li>
+                    <li><b>Online Ckeck-in ve Online Ödeme İmkanı</b><br />Misafirlerinize Online Ckeck-in ve Online Ödeme imkanı sunabilirsiniz.</li>
+                    <li><b>Ödeme Linki ile Tahsilat</b><br />Misafirlerinize ödeme linki göndererek tahsilatlarınızı yapabilirsiniz.</li>
+                    <li><b>Ödeme Seçenekleri</b><br />Sistem yerinde ödeme + Yerinde Depozit + Kredi Kartı + Taksit + Puan Kullanımı gibi farklı ödeme şekillerini desteklemektedir.</li>
+                    <li><b>SSL Sertifikası ve Otelinize Özgü Subdomain</b></li>
+                    <li><b>Grup Otel Rezervasyon Modülü</b><br />Grup Otel Rezervasyon Modülü ile aynı anda farklı tesislerinizi satışa sunabilirsiniz.</li>
+                    <li><b>Farklı Tarih ve Farklı Oda tiplerinin satışını aynı anda yapabilme özelliği</b></li>
+                    <li><b>Grup Otel Rezervasyon Modülü</b><br />Grup Otel Rezervasyon Modülü ile aynı anda farklı tesislerinizi satışa sunabilirsiniz.</li>
+                    <li><b>Çağrı Merkezi Entegrasyonu</b></li>
+                </ul>
+
+
+
+            </ul>
+        </div>
+
+
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+    <div class="container" style="padding-left:200px; flex-shrink:1;">
+
+        <div style="height:20px; width:auto;"></div>
+        <div style="height:auto; width:auto; background-color:snow;">
+            <img src="resimler/mobilorder_gif_banner_1024x300.gif" class="img-fluid" />
+            <br />
+            <h3 style="color:red;"><b>ELEKTRA Temassız Misafir Uygulaması ile TEMAS YOK, KAZANÇ ÇOK</b></h3>
+            <br />
+            <p>Sağlıklı Turizm Kriterleri uyarınca Covid-19 önlemlerini uygulayan otellerin iş yükünü azaltan, müşteri memnuniyetini arttıran ELEKTRA MİSAFİR UYGULAMASI ile restoran veya SPA rezervasyonu, Online check-in, yiyecek/içecek siparişi, oda temizliği, bell boy talebi  gibi 24 farklı işlem için sosyal mesafe korunduğu gibi, sağlanan dijital hizmetlerle oteller için yeni kazançların kapıları da aralanıyor</p>
+            <br />
+            <center><img src="resimler/destek_order.png" class="img-fluid" /></center>
+            <br />
+            <p>Uygulama, misafirleriniz, rezervasyon, satın alma ve hizmet taleplerini dijital olarak iletip, alternatifler arasından seçim yapıp, online olarak onaylayıp, online temassız ödeme yapabilmesine olanak sağlıyor</p>
+            <br />
+            <center><img src="resimler/mobilorder3-228x400.jpeg" class="img-fluid" /></center><br />
+            <b>ELEKTRA MİSAFİR UYGULAMASI ile misafirleriniz;</b>
+            <ul>
+                <li>Online Check-In</li>
+                <li>Online Fatura Talebi</li>
+                <li>Online Restoran Rezervasyonu</li>
+                <li>Online SPA Rezervasyonu</li>
+                <li>Online Info Katalog</li>
+                <li>Online Oda Temizliği Talebi</li>
+                <li>Online Uyandırma Hizmeti Talebi</li>
+                <li>Online Yiyecek-İçecek Siparişi</li>
+                <li>Online Arıza Bildirimi</li>
+                <li>Online istek/Şikayet Formu</li>
+                <li>Online Bellboy Talebi</li>
+                <li>Online Çamaşırhane Hizmeti Talebi</li>
+                <li>Online Golf Sahası Rezervasyonu</li>
+                <li>Online Şezlong Rezervasyonu</li>
+                <li>Online Su Sporları Rezervasyonu</li>
+                <li>Online Tenis Sahası Rezervasyonu</li>
+                <li>Online Oda Tipi Yükseltme</li>
+                <li>Online Transfer Talebi</li>
+                <li>Online Sağlık Kontrol Formu</li>
+                <li>Online Oda Kapısı Kodu Talebi</li>
+                <li>Online Oda Kapısı Açma</li>
+                <li>Online Check-Out</li>
+
+            </ul>
+            <b>İşlemlerini gerçekleştirebilirler.</b>
+            <br /><br />
+            <h3 style="color:red;">Ön Büro’da Misafirle Yüz yüze Yapılan İşlemler Artık Online/Temassız</h3>
+            <p>Misafirler Online Checkin - Check Out, Online Folyo, Online Fatura, Online Ödeme işlemlerini "Elektra Misafir Uygulaması" ile temassız gerçekleştirebilirler.</p>
+            <center><img src="resimler/onlineche_ekran.jpg" width="200px" height="300px" /></center>
+            <p>Misafir, cep telefonu, tablet ya da bilgisayar kamerası ile pasaport/kimlik fotoğrafını çekip ekleyebiliyor, hatta sistemin, OCR yöntemi ile, kimlik bilgilerini otomatik doldurmasını sağlayabiliyor.</p>
+            <br />
+            <p>Bu aşamada imzasını da ekrana direkt atarak, <b>KVKK</b> ve diğer işlemler için de gerekli onayı elektronik olarak vermiş oluyor.</p>
+            <br />
+            <p>Her kişi kendi bilgilerini doldurabileceği gibi, aynı odada kalanlar için de <b>toplu check-in</b> yapabiliyor.</p><br />
+            <p>Böylece ön bürodaki kimlik alma, kağıt kalem alışverişi, fotokopi çekme vb kayıt sürecindeki yakın mesafe temas ortadan kalkıyor.</p>
+            <br /><br />
+            <b>Odalar Anahtarsız Açılıyor</b>
+            <p>Oda anahtarı ya da kartı yerine  wi-fi yöntemi ile temassız/anahtarsız oda kapısı açılabiliyor.</p>
+            <p>Check out yaparken de misafir <b>hesap dökümünü</b> görüyor, <b>online ödeme</b> yapıyor hatta fatura bilgilerini de girerek <b>faturasının online gönderilmesini</b> talep edebiliyor..</p>
+            <br />
+            <p style="color:red;"><u>Restoranlardan Golf Sahalarına Tesisteki Tüm Mekanların Rezervasyonu Online Yapılıyor</u></p><br /><br />
+            <center><img src="resimler/online_restoran_rez-1.png" /></center>
+            <br />
+            <p>Misafir, <b>Alakart Restoran, Plaj, SPA, Golf veya Tenis sahası</b> gibi randevu veya rezervasyon gerektiren tüm işlemler* için online rezervasyon yapabiliyor.</p>
+            <br />
+            <p>Elektra Misafir Uygulaması, rezervasyon talebi geldiğinde <b>“Seans, Kapasite ve Doluluk”</b> kontrolü yaparak ilgili masa/şezlong vb. numarası ile rezervasyonu alıyor. Ücretli ise folyoya yansıtıyor.</p>
+            <br />
+            <p>Bu sayede misafir hiçbir yerde beklemeden, tüm tatilini cep telefonundan kendisi planlamış oluyor.</p>
+            <br />
+            <b><i>*Elektra Misafir Uygulamasına Otelin ihtiyacına göre Günlük Turlar, Bisiklet Kiralama vb gibi farklı konularda da rezervasyon alanı eklenebilir.</i></b><br /><br />
+            <h4 style="color:red;">Dijital Menü ile Garsonsuz Sipariş</h4>
+            <center><img src="resimler/digital_menü.jpg" width="200px" height="300px" /></center>
+            <br />
+            <p><b>Dijital Menü</b>, işletmelere özel olarak tasarlanan bir ara yüz ile, menüde bulunan tüm ürünlerin, mobil cihazlar ve akıllı telefonlar üzerinden online ve offline olarak sipariş edilebilmesini sağlar.</p>
+            <br />
+            <p>Böylece misafirin, servis elemanlarıyla, servis elemanlarının da mutfak çalışanlarıyla olan zorunlu iletişimi minimize edilmiş olur. Ayrıca dijital menülerde<b> ürün fotoğrafı, fiyat ve açıklamalar, çoklu dil seçenekleri</b> ile istenildiği gibi düzenlenip, anında güncellenebilir.</p><br />
+            <p>Alternatif olarak siparişin odaya veya plaja gönderilmesi de isteyebilir.</p><br />
+            <p>Böylece otelin restoranı hız kazanmanın yanında misafir memnuniyetini de üst düzeye çıkarmış olur.</p><br /><br />
+            <h4 style="color:red;"><u>Sipariş ve Satın Alma İşlemleri Online’da</u> </h4>
+            <br />
+            <center><img src="resimler/transfer.png" class="img-fluid" /></center>
+            <br />
+            <p>Otele ek gelir sağlayan <b> Oda Yükseltme, Transfer Hizmeti, Geç Çıkış veya ilave Aktivite satışları</b> gibi işlemler Elektra Misafir Uygulaması ile tek ekrandan yapılıyor.</p>
+            <br />
+            <p>Otelde/restoranda yapılan harcamalar için misafire <b>güvenli ödeme linki</b> gönderilebiliyor. Misafir linki tıklayarak ödenmesi gereken tutarı görüyor ve <b>PCI standartlarında güvenli olarak ödemesini</b> gerçekleştiriyor.</p><br /><br />
+
+            <h4 style="color:red;"></h4>
+            <center><img src="resimler/teknik_servis.png" class="img-fluid" /></center>
+            <br />
+            <p>Misafir, herhangi bir şikayet, talep, rezervasyon veya sipariş girdiğinde bu talep direkt olarak konuyla ilgili birime iletilir.</p><br />
+            <p>Ayrıca bir organizasyona veya müdahaleye gerek kalmadan iş veya görev dağılımı otomatikman sağlanır. Konuyla ilgili tesisin yapmış olduğu planlama ve işlem aşamalarını, tamamlanma durumlarını da misafir kendi girdiği ekrandan kontrol edebilir yani süreci gözlemleyebilir.</p><br />
+            <p>Talebi tamamlandıktan sonra eğer isterse bir geribildirim yaparak memnun kalıp kalmadığını belirtir, hatta puanlama yapabilir.</p><br /><br />
+
+            <h3 style="color:red;">ELEKTRA MİSAFİR UYGULAMASI Nasıl Kullanılır?</h3>
+            <br />
+            <p>İşletmeler, web sitelerine yerleştirdikleri bir link aracılığıyla ya da platformun mobil uygulaması üzerinden sistemi misafirlerine kullandırtabilirler</p>
+            <br />
+            <p>Misafirler, otelin web sitesindeki linki tıklayıp ilgili sayfaya girdikten ya da uygulamayı telefonlarına indirdikten sonra, tesisin kendilerine vermiş olduğu rezervasyon numarası ya da voucher numarası ile login olabiliyorlar.</p><br />
+            <p>Eğer misafir bu bilgilere sahip değilse, kişisel mail adresine gerekli bilgilerin iletilmesi için, aynı ekran üzerinden “Send My Link” yazısına tıklayarak talepte bulunabiliyor.</p><br /><br />
+
+            <h3 style="color:red;">Elektraweb’in “Güvenli Turizm Modülü” ile DENETİM SİZDE </h3>
+            <p>Güvenli Turizm Sertifikasının 152 kriterini eksiksiz ve hatasız uygulayabilmeniz için gerekli tüm yazılım çözümlerini sunar.</p>
+            <br />
+            <p>İzleme formları ve kontrol listelerini dijital olarak doldurup, tüm ölçümlerinizi kayıt altına alıp, oluşturduğunuz prosedürlerin uygulamasını Elektra üzerinden rahatlıkla denetleyebilirsiniz</p><br />
+
+            <h4><b>“ELEKTRA COVİD PAKETİ” İLE NELER YAPABİLECEKSİNİZ?</b></h4>
+            <br />
+            <ul>
+                <li>Süreç yönetimi ve tekrarlayan işleri, periyodik izleme formları ile takip edilirsiniz (havuz, plaj çevresi temizlik & dezenfeksiyon işlemlerinin takibi, temizlik uygulamalarının kayıt altına alınması)</li>
+                <li>Misafirlerinizin ateşlerinin ölçüm değerlerini kayıt altına alabilirsiniz</li>
+                <li>Online Check in, Online Check out, Dijital menü, Online sipariş, online kapı kilit uygulamaları ile sosyal teması minimize edebilirsiniz</li>
+                <li>online fatura, Online ödeme ve/veya ön ödeme ile nakit kullanımını kaldırabilirsiniz</li>
+                <li>Mutfakta ve mevcut depolama alanlarında sıcaklık ve nem ölçümleri ile havuz suyu klor seviyesini kayıt altına alabilirsiniz</li>
+                <li>Restoran, cafe, Spa ve fitness salonlarında giriş çıkış ve kişi sayısının sınırlandırılması işlemlerini yürütebilir, masa, personel ve misafir kayıtlarının takibini yapabilirsiniz</li>
+                <li>İzolasyon odalarınızın takibini yapabilirsiniz</li>
+                <li>Cihazların periyodik bakım işlemlerini kayıt altına alabilirsiniz</li>
+                <li>Personel giriş çıkış bilgileri, ateş ölçüm ve sağlık bilgilerini, aldığı eğitimleri, psikolojik destek kayıtlarının takibini yapabilirsiniz</li>
+            </ul>
+        </div>
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

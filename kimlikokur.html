@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container" style="padding-left:300px; width:auto; height:auto;">
+        <img src="resimler/KIMLIKOKUR_slider.gif" class="img-fluid" />
+        <br />
+        <h3 style="color:red;">Kimlikokur Kimlik ve Pasaport Okuma Programı</h3>
+        <p><b>Kimlikokur</b>, dünyadaki tüm kimlik ve pasaportları okuyup tanıyabilen, resim ve metin olarak saklayıp, windows ortamındaki tüm programlara aktarabilen bir yazılımdır.</p>
+        <br />
+        <table>
+            <tr>
+                <td>
+                    <img src="resimler/kimlikokur1.jpg" class="img-fluid" />
+                </td>
+                <td>
+                    <p>
+                        Kimlikokur, otel ve hastane gibi girişte kimlik kaydı yapılması zorunlu tüm kurumlarda kayıt için harcanan zamanı en aza indirip, hatayı ortadan kaldırır; böylece müşteri memnuniyetinizi artırır ve hizmet kalitenizi yükseltir.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td>
+                    <h6><b>Otellerde Temassız Kimlik Okuma</b></h6>
+                    <br />
+                    <p>Kimlikokur ile ön büronuzda sosyal mesafenizi “<b>Temassız Kimlik Okuma</b>” teknolojisiyle koruyun</p><br />
+                    <p>
+                        Misafiriniz kendi kimliğini ya da pasaportunu resepsiyon bilgisayarının web kamerasının önüne tutar. Sistem, fotoğrafı çekilen kimliğin programa aktarılmasını sağlar
+                    </p>
+                    <br />
+                    <p>Temas yok, risk yok… Müşteri memnuniyeti var..</p>
+                </td>
+                <td>
+                    <img src="resimler/kimlikokur_webcam.jpg" class="img-fluid" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td>
+                    <img src="resimler/kvkk_image.jpg" class="img-thumbnail" />
+                </td>
+                <td>
+                    <h5><b>KVKK Uyumlu Check-in </b></h5>
+                    Kimlikokur ile;
+                    <ul>
+                        <li>Kimlik resmi ve kimlik bilgileri ön büro programına aktarıldıktan sonra şifrelenebilir ve sadece yetkili kişi şifre ile kimliklere erişebilir.</li>
+                        <li>Kimliğin resmi çekilir çekilmez silinebilir ya da resmi ve kimlik verileri belirlenen gün sonrasında otomatik olarak silinebilir.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li>Belirli aralıklarla otomatik olarak resim ve data silinebilir.</li>
+            <li>Aktarılmış kimliklerin listeden düşmesi ve kimsenin ulaşamaması sağlanabilir.</li>
+            <li>Kimlik resimlerinin şifreli olarak saklanması ve sadece Kimlikokur’dan erişilmesi sağlanabilir.</li>
+            <li>Kimlik resimlerinin üzerine ‘kopyadır ve misafirin izni alınmıştır’ veya tarafınızdan belirlenecek bir yazı otomatik olarak eklenebilir.</li>
+        </ul>
+        <br />
+        <h5><b>NEDEN KİMLİKOKUR?</b></h5>
+        <br />
+        <p><b>Kimlikokur'</b>un teknoljisi, onu benzerlerinden ayıran bir çok üstün özellik sağlar. Bunlardan sadece bir kaçını şöyle özetleyebiliriz;</p>
+        <br />
+        <ul>
+            <li>Tüm tarayıcılarla çalışması, bir cihaza bağımlı olmaması;</li>
+            <li>Tüm ülke pasaportlarını ve çizgi kodlu ülke kimliklerini  %100 okuyabilmesi;</li>
+            <li>TC Nüfus cüzdanında çok yüksek  doğruluk oranına sahip olması;</li>
+            <li>İstenilen her türlü programa veri aktarabilmesi;</li>
+            <li>Kullanımın çok hızlı ve pratik olması;</li>
+            <li>Tarayıcı üzerinden de  tek tuşla çalışması;</li>
+            <li>Kimliğin tipini, önünü – arkasını  otomatik olarak algılaması;</li>
+            <li>Yeni kimlik türlerini öğrenebilmesi;</li>
+            <li>Aynı anda birden fazla  programa entegre olabilmesi;</li>
+            <li>Entegre olduğu program içinden tek tuşla(hotkey) çalışabilmesi;</li>
+            <li>Sessiz modda, arka planda, görünmeden çalışabilmesi;</li>
+            <li>Entegre olduğu programa kimlik bilgileri gibi resmini de  aktarabilmesi;</li>
+            <li>Veriyi hem forma, hem tabloya hem de bir metin dosyasına eş zamanlı yazabilmesi;</li>
+            <li>Seçenekli bilgileri programın istediği seçeneğe çevirerek aktarabilmesi;</li>
+            <li>İlki büyük, diğerleri küçük şekilde harf değişimi yapabilmesi;</li>
+            <li>Türkçe karekterleri ingilizce’ye çevirebilmesi;</li>
+            <li>Kimlik üzerinde bozuk  kısımların mouse ile seçilerek okutulabilmesi;</li>
+            <li>Toplu girişlerde arka arkaya toplu okuma ve sonradan aktarma yapılabilmesi;</li>
+            <li>Kullanıcı tarafından değiştirilebilen dizaynda çıktı vermesi;</li>
+            <li>Sınırsız arşivleme yapabilmesi, arşivedeki bilgilere kolayca ulaşım sağlaması;</li>
+            <li>Mobil tarayıcılarla çalışabilmesi;</li>
+            <li>Dosyadan okuma  yapabilmesi;</li>
+            <li>Çift taraflı okuyucuları desteklemesi, kimliğin ön ve arka yüzünü aynı anda okuması;</li>
+            <li>Windows, Java ve Web tabanlı programlara da aktarım yapabilmesi.</li>
+
+        </ul>
+
+
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+
+
+    <div class="container" style="padding-left:300px; width:auto; height:auto;">
+        <div style="height:20px; width:auto;"></div>
+        <div style="height:auto; width:auto; background-color:snow;">
+
+            <img src="resimler/SPAYONETIMI_slider.gif" class="img-fluid" />
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <h2>ElektraWEB Spa Nedir ?</h2>
+                        <p>Spa merkezleri, sağlık merkezleri, spor merkezleri, kulüpler ve dernekler gibi üyelikle çalışan tüm kurumlar için geliştirilmiş web tabanlı bir yazılımdır.</p>
+                    </td>
+                    <td>
+                        <img src="resimler/elektraspa.png" class="img-fluid" />
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+            <hr />
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <img src="resimler/2-mekanRezervasyon.png" class="img-fluid" />
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Müşteri randevularınızı hızlı bir şekilde alabilir ve gelir ve giderlerinizi, stoklarınızın kontrolünü verimli bir şekilde denetim altına alabilirsiniz.</li>
+                            <li>Spa’da yapılacak tüm işlemler için; örneğin masaj, cilt bakımı, egzersiz çalışması vb. rezervasyon alınabilir ve alınan rezervasyonlarla ilgili terapist, kullanılacak cihazlar ve oda ayırtılabilir. Bu rezervasyonları günlük, haftalık, aylık ajanda ekranında görüp planlama yapabilirsiniz.</li>
+                            <li>Rezervasyonlar online olarak da alınabilir. Bir gün öncesinden misafire SMS ve email ile hatırlatma yapılabilir. Üyeliklerde veya paket alımlarda işlemler çok daha kolay takip edilebilir.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+            <hr />
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Böylece hem tesis içerisindeki odalar, egzersiz salonları, tenis kortları vb. hem de çalışanlar en verimli şekilde organize edilir. İşlem yapacak olan çalışanlarınızın alacakları primler otomatik olarak hesaplanır.</li>
+                            <li>Üyeliklerde ise üyenin giriş çıkışları ve aidatları takip edilir.</li>
+                            <li>Üyenin gelişme, sağlık durumu programları kaydedilerek ona en iyi çalışma ve hizmet programı sağlanmış olur.</li>
+                            <li>ElektraWeb Spa Türkiye’deki<b> ilk ve tek web tabanlı spa programıdır.</b></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <img src="resimler/5-TopluRezervasyon.png" class="img-fluid" />
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+            <center class="container" style="background-color:white;"><h2>Neden ElektraWeb Spa?</h2></center>
+            <br />
+            <table class="container" style="background-color:white;">
+                <tr>
+                    <td>
+                        <img src="resimler/Ekran1.png" />
+                    </td>
+                    <td>
+                        <h3>Mobil</h3>
+                        <p>İnternet erişimi olan her yerden ve her cihazdan (cepten, tabletten, masaüstünden) rahatça kullanır ve teknolojinin sağladığı özgürlüğün keyfini çıkarırsınız. İlk satın alma maliyeti olmadığından programı hemen kullanmaya başlayabilirsiniz. ElektraWEB Spa sunucuya ihtiyaç duymadığından, sunucu ve sunucu lisanslarına ait maliyetlerden de kurtulursunuz.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="resimler/ekran2.png" />
+                    </td>
+                    <td>
+                        <h3>Hızlı ve Kolay Kullanım</h3>
+                        <p>Masaüstü versiyonlara göre, ajanda ekranının açılması, işlem girilmesi ve tahsilat yapılması ortalama 5 kat kadar daha hızlıdır. Kolay kullanımlı ve görsel ekran tasarımına sahiptir. ElektraWeb ile entegre olduğundan otel ile bağlantısı mevcuttur. Kolay kullanımlı, görsel ekran tasarımına sahiptir. ElektraWeb ile entegreli olduğundan otel ile bağlantısı mevcuttur.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="resimler/ekran3.png" />
+                    </td>
+                    <td>
+                        <h3>Zaman ve İşlem Tasarrufu</h3>
+                        <p>Telefon ve tablet üzerinden randevu alma ve üyelik yapma imkanı sağlar. Özellikle fitness üyelikleri için işletmeler öncesinde müşteriler ile birebir görüşme yapabilirler ve kişiye telefon veya tablet verip kendi üye kartını doldurmasını sağlayabilirler.</p>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <center><h2>ElektraWEB Spa ile Neler Yapabilirsiniz?</h2></center>
+            <br />
+
+            <h5><b>Üye Kartı Oluşturma ve Geçmiş İşlemlerini Saklama</b></h5>
+            <br />
+            <p>Spa kullanan müşterilerin bilgilerine ait karttır. Sağlık, geçmiş, kimlik, adres gibi bilgileri içerisinde bulundurur. Misafirin tekrar gelmesi durumunda yeni kart açmak yerine mevcut üye kartını kullanarak misafirin geçmiş işlemlerinin takibi yapılabilir.</p>
+            <br />
+            <h5><b>Masaj Randevusu Alma</b></h5>
+            <br />
+            <p>Ajanda üzerinde sürükle-bırak mantığı ile rezervasyon alma sağlanır. Daha sonra ajanda üzerinde girilen rezervasyonun görevli, tarih gibi bilgileri değiştirilebilir.</p>
+            <br />
+            <h5><b>Paket Satışı Yapma</b></h5>
+            <br />
+            <p>Sistemde tanımlanan paketlerin misafirlere satışı sağlanır.</p>
+            <br />
+            <h5><b>Toplu Rezervasyon Alma</b></h5>
+            <br />
+            <p>Misafirin paket dışında diğer hizmetlerden istediği masajlardan çoklu adet seçerek satış yapılabilir.</p>
+            <br />
+            <h5><b>Görevli ve Masaj Odası Bazlı Rezervasyon Alma</b></h5>
+            <br />
+            <p>Prim takibi ile görevlinizin prim hak edişleri kolayca hesaplanabilir. Prim tanımları ekranına hangi masajdan ne kadar veya yüzdesel olarak tanımlar yapılabilir. Ajanda üzerinden satış yapıldıkça prim raporu üzerinden görevli primleri hesaplanır.</p>
+            <br />
+            <h5><b>Fitness Üyeliği Oluşturma</b></h5>
+            <br />
+            <p>Fitness bölümünde 3 aylık,1 yıllık gibi üyelik paketleri tanımlayabilirsiniz. Ödeme alma işleminde otel bağlantısı mevcut ise kişinin folyosuna işlemler otomatik ve anlık olarak düşer.</p>
+            <br />
+            <h5><b>Üyelere Fitness Programı Hazırlama</b></h5>
+            <br />
+            <p>Fitness müşterilerinize tanımlanan fitness hareketleri üzerinden antrenman programı hazırlayabilirsiniz.</p>
+            <br />
+            <h5><b>ElektraWeb ile Misafirlerin Folyosuna İşlem Gönderme</b></h5>
+            <br />
+            <p>Elektraweb bağlantısı ile spa tarafında otel misafirlerini görebilir, işlemleri kişinin folyosuna veya sanal folyolara gönderilirsiniz. Bu işlemler ödeme kayıt edildiği anda anlık olarak düşer.</p>
+            <br />
+            <h5><b>Satışların Gelir ve Tahsilatlarının Takibi</b></h5>
+            <br />
+            <p>Yapılan satışlardan elde edilen gelir ve tahsilat miktarını raporlar üzerinden görebilirsiniz.</p>
+            <br />
+            <h5><b> Masaj, Üyelik, Stok Satışlarının Detaylı Raporları</b></h5>
+
+
+        </div>
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

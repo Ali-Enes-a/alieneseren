@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+    <div class="container" style="padding-left:200px;">
+
+        <div style="height:20px; width:auto;"></div>
+        <div style="height:auto; width:auto; background-color:snow;">
+            <img src="resimler/POS_slider.gif" class="img-fluid" />
+            <br />
+            <h3 style="color:red;"><b>Elektraweb POS Restoran Yönetim Programı</b></h3>
+            <b>En Kapsamlı Restoran Programı SIFIR YATIRIM MALİYETİ İLE…</b>
+            <p>Restoranınızı işletirken ihtiyaç duyacağınız online sipariş, ÜCRETSİZ dijital menü ve paket sipariş programı, stok takibi, muhasebe, satın alma, demirbaş, garson ve masa takibi, rapor – analiz sunumları, adisyon takibi gibi pek çok özelliğe tek program üzerinden ulaşabileceksiniz. Üstelik tamamen bulutta olduğu için sıfır yatırım maliyeti ile… Hemen kayıt yapıp kullanmaya başlar ve sadece kullandığınız kadar ödersiniz</p>
+            <br />
+            <b>Restoranınızı Her Yerden Yönetebilirsiniz</b>
+            <p>Web tabanlı, bulut yapı ve mobil uyumluluk özellikleri ile internet bağlantısı olan her cihazdan ve her yerden programa ulaşabilirsiniz. Mümkün olan en düşük ağ bant genişliğini kullanır. Bu nedenle, yavaş bağlantılarda bile veri kaybı olmadan hızlı çalışır. Kurulum gerektirmez</p>
+            <br />
+            <b>Kullanımı Çok Kolaydır</b>
+            <p>Hızlıdır. Sade tasarımı ile kullanımı kolay ve kullanıcı dostu bir uygulamadır. Hızlı arama seçeneği ile aradığınız ürünün birkaç karakterini yazarak anında bulursunuz. </p>
+            <br />
+            <center><img src="resimler/POS_TEL_siparis.png" width="200px" height="300px" /></center>
+            <b>Servis Elemanlarınızın En İyi Dostudur</b>
+            <ul>
+                <li>Ürünlerin detaylarına kolayca ulaşılabilirsiniz. (İç malzeme, görseller, hazırlanma süresi..vb)</li>
+                <li>Malzemelerdeki değişiklik ya da pişirme talepleri gibi ek istekleri mutfağa iletilebilirsiniz.</li>
+            </ul>
+            <br />
+            <b>Siparişlerinizi Kolaylıkla Yönetebilirsini</b>
+            <p>Seçilen ürün adisyon yazdırılmadan istenildiği kadar arttırılıp azaltılabilir. Ayrıca ek bir ürün istenirse, o adisyona eklenip gönderilir. Hazır olan siparişler ilgili garsona anında iletilir</p>
+            <br />
+            <b>İstediğiniz Yöntemle Hesabı Alabilirsiniz</b>
+            <p>Nakit, kredi kartı, yemek kartı, hesaptan ödeme gibi pek çok yöntemle beraber, misafirlerinizin «parçalı» olarak bu yöntemlerle ödeme yapabilmesine de olanak sağlar. Değişik para birimlerinde hesap alıp, detaylı kasa takibi yapabilirisiniz.</p>
+            <br />
+            <b>Tüm Masaların Güncel Durumunu İzleyebilirsiniz</b>
+            <p>Masaların müsaitlik ve temizlik durumlarını tek ekrandan izleyebileceğiniz gibi, her masanın güncel adisyonlarını da rahatlıkla kontrol edebilirsiniz.</p>
+            <br />
+            <b>Donanım Değiştirmek Zorunda Kalmazsınız</b>
+            <p>Dokunmatik bilgisayar, mobil terminal, tablet, cep telefonu, turnike gibi her türlü donanımla tam uyumludur. Farklı bir sistemden Elektraweb POS’a geçiş yapsanız bile donanımlarınızı değiştirmek zorunda kalmazsınız.</p>
+            <img src="resimler/donanim.jpg" class="img-fluid" />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">RESTORANLARDA ONLINE SİPARİŞ YÖNETİMİ</h3></center>
+            <b>Elektraweb POS tüm tesislere, sadece tesise özel, kendi web sitesine de ekleyebileceği “Dijital Menü”yü ÜCRETSİZ veriyor.</b>
+            <ul>
+                <li>Tesisler hem mobil hem de webden ulaşılabilir olur. Misafirler dijital menüye online ya da kare kod okutarak ulaşabilir.</li>
+                <li>Tesis içinde masaya veya odaya, tesis dışında adrese teslim veya gel-al siparişleri online alır.</li>
+                <li>Online sipariş esnasında yemek fotoğraflarını, yemeğin içeriğini, alerjenleri, besin ve enerji değerlerini gösterir. Üstelik bunları müşterinin istediği dilde yapar.</li>
+                <li>Müşterilerine kendi favori menülerini oluşturmasını sağlar, her siparişinde veya yaptığı paylaşımla gelen siparişinde puan kazandırır.</li>
+            </ul>
+            <br />
+            <img src="resimler/sfgdsdfgds.jpg" class="img-fluid" />
+            <b>Karekod ile Sipariş</b>
+            <p>Elektraweb POS’un tesise özel ürettiği karekodun kartvizitlerde, adisyonlarda flyer ve magnetlerde kullanımı daha hızlı ve kolay ulaşılabilir olunmasını sağlar. Böylece müşterileriniz masada, odasında, şezlongda, plajda, evinde, iş yerinde… her yerden dijital menünüze ulaşabilir ve güncel ürünleriniz arasından seçim yapıp kolaylıkla sipariş verebilir.</p>
+            <br />
+            <center><img src="resimler/POS_TEL_sosyalmedya.png" width="200px" height="300px" /></center>
+            <b>Sosyal Medyadan Sipariş</b>
+            <p>Hem tesis hem de müşterileri sosyal medyada ürünleri paylaşarak tanıtım yapabilir. Sosyal medya sayfalarına eklenen bir link ile direkt satış yapılabildiği gibi, süreli ve adetli kampanyalar da oluşturulabilir. Kendi sosyal medya hesapları üzerinden dijital menünüzü paylaşan müşterilerinize, onların paylaşımları ile gelen her siparişten puan ya da indirim tanımlayabilirsiniz.</p>
+            <br />
+
+            <b>Sanal POS ile Ödeme Alma</b>
+            <p>Sanal posunuza sıfır maliyetle hemen sahip olun online tahsilatlarınız hiç beklemeden ertesi günü banka hesabınızda olsun. Tüm banka kredi ve nakit kartlarını kabul edin, taksitlendirme yapın müşterilerinize puan kazandırın.</p>
+            <br /><br />
+
+            <img src="resimler/POS_TABLET_mutfak-2048x1487.png" class="img-fluid" />
+            <b>Mutfak Takibi</b>
+            <ul>
+                <li>10 ayrı mutfağa kadar sipariş printer veya ekranları ile mutfak takibi yapılabilir.</li>
+                <li>Tüm siparişlerin mutfağa giriş, hazırlanma ve servis zamanlarını dokunmatik ekranlarla takip edilmesisağlanır.</li>
+                <li>Garson ve mutfak arasında iletişim tamamen mobilgerçekleştirir.</li>
+            </ul>
+            <br />
+            <img src="resimler/POS_PC_pakettakibi-2048x1228.png" class="img-fluid" />
+            <b>Paket Takibi</b>
+            <ul>
+                <li>Online veya telefon ile siparişin her aşamasını (kabul, hazırlanma, servis, teslim) hem siz hem de müşterileriniz kolayca takip edebilir.</li>
+                <li>Hiçbir sipariş atlanmaz, anında teslim edilir. Kuryeleriniz sipariş ve yol bilgisine cep telefonundan ulaşır, ödemeyi teslimatla beraber alır.</li>
+
+            </ul>
+            <br />
+            <b>Yemek Satış Sistemlerine Entegrasyon</b>
+            <p>Yemeksepeti, Getiryemek, Bisipariş gibi yemek sitelerine entegredir. Bu sitelerden aldığınız siparişler online olarak sisteminize düşer, siz ayrıca başka bir program kullanmak zorunda kalmazsınız.</p>
+            <br />
+            <b>Yazar Kasa Entegrasyonu</b>
+            <p>Tüm yazarkasalar ile entegre kullanabilirsiniz. Adisyonu yazdırdığınız anda tüm bilgiler POS cihazına aktarılır ve fişi otomatik kesilir.</p>
+            <hr />
+
+            <br />
+            <br />
+            <center><h3 style="color:red;">ÜYELİK YÖNETİMİ, CRM, E-CÜZDAN </h3></center>
+            <ul>
+                <li>Tek bir SMS onayı ile üye olabilme imkanı</li>
+                <li>Profil oluşturup, favori menüler yaratabilme ya da eski siparişleri listeleyerek tekrar sipariş verebilme</li>
+                <li>Üyenin profiline göre otomatik alerjen uyarısı</li>
+                <li>Üyelere hem kendi siparişlerinden hem de sosyal medyada yaptıkları paylaşım sayesinde gelen siparişlerden puan kazandırma</li>
+                <li>Kredi kartı ile e-cüzdana para yükleyebilme ve online sipariş esnasında e-cüzdan kullanarak ödeme yapabilme</li>
+                <li>Tesis içerisinde karekod ile temassız ödeme için e-cüzdan kullanabilme</li>
+            </ul>
+            <br />
+            <br />
+            <b>CRM</b>
+            <p>Üyeler kendi tercihlerini sisteme girerek işletmenin onları daha iyi tanımasını sağlarken, anket ve yorumlarla işletmeyi değerlendirir ve aksaklıkların hemen fark edilip düzeltilmesini sağlamış olur. Üyeler WhatsApp, SMS gibi kanallar üzerinden kampanya veya promosyonlardan haberdar edilebilir, evlilik, yaş günü ve yıldönümleri için özel indirimler uygulanabilir</p>
+            <br />
+            <br />
+            <center><img src="resimler/POS_TEL_bonus.png" width="200px" height="300" /></center>
+            <b>E-Cüzdan</b>
+            <p>Misafirleriniz ön ödeme yaparak dijital cüzdanlarına para yükleyebilir ve bu parayı online olarak veya tesis içinde cep telefonundaki karekodu göstererek harcayabilirler. E-Cüzdan bakiye dışında kazanılan puanları da gösterir ve harcanması için olanak sunar.</p>
+
+            <br /><br />
+            <b>E-Kart</b>
+            <p>Misafirleriniz sisteme üye olur olmaz otomatik olarak bir dijital karta sahip olur. Bu kartı tesis içinde veya online sipariş esnasında telefonunu göstererek kullanabilir. Böylece geçiş kontrolü, ödeme, hızlı sipariş gibi birçok avantaja sahip olur.</p>
+
+            <hr />
+            <br /><br />
+            <b>ElektraWeb POS ile şunları yapabilirsiniz:</b>
+            <ul>
+                <li>Özel notlar, gruplanmış öğeler ve daha fazlası ile gelişmiş siparişler oluşturma</li>
+                <li>kişiye özel tasarlanmış makbuzlar ve faturalar oluşturma ve basma</li>
+                <li>Talep üzerine özel fiyatlar belirleyebilir ve belirli bir yüzde veya sabit tutar kullanarak indirim uygulayabilir</li>
+                <li>siparişleri hemen al ve ayrı zamanlarda mutfağa gönder</li>
+                <li>siparişleri ve durumlarını hiçbir şey yazdırmadan takip etmek için mutfak ve garson ekranlarına erişin</li>
+                <li>seçili kalemlere veya sabit bir miktara dayalı bölünmüş çek ödemeleri yapma</li>
+                <li>Sipariş verdiğinizde, sipariş talimatları otomatik olarak mutfak yazıcılarına gönderilir.</li>
+                <li>İhtiyacınız olabilecek her şey için ayrıntılı raporlar sağlar.</li>
+                <li>Basit ve sezgisel bir kullanıcı arayüzüne sahiptir.</li>
+                <li>7/24 müşteri desteğini destekler.</li>
+            </ul>
+        </div>
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

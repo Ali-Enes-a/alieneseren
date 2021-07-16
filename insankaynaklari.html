@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+    <div class="container" style="padding-left:200px;">
+
+        <div style="height:20px; width:auto;"></div>
+        <div style="height:auto; width:auto; background-color:snow;">
+            <img src="resimler/elektraweb-ik.gif" class="img-fluid" />
+            <br />
+            <h3 style="color:red;"><b>ElektraWeb İnsan Kaynakları Programı</b></h3>
+            <h4><b>Daha İyi Planlama, Daha İyi Yönetim ve Daha Yüksek Performans..</b></h4>
+            <br /><br />
+            <p><b>Elektraweb İK Programı</b>, web tabanlı ve bulut yapıda olduğu için her yerden, her an programa erişebilirsiniz. Dünyanın en güvenli sunucularında barındırılmaktadır. Bu sayede yüksek hız ve güvenlik sağlar. Yedeklemeler otomatik yapılır. Üstelik herhangi bir donanıma ve ön kuruluma ihtiyaç duyulmadan, web üzerinden erişim sağlandığından, hemen kullanmaya başlayabilir ve çok ekonomik fiyatlarla küçük ölçekli şirketlerden binlerce kişilik holdinglere kadar pek çok işletme tarafından kullanılan  Elektraweb Web Tabanlı İnsan Kaynakları Sistemi‘nin avantajlı dünyasından yararlanabilirsiniz.</p>
+            <br />
+            <p><b>Elektraweb İK Yazılımı</b>, özellikle turizm ve sağlık sektöründe olduğu gibi 7/24 yoğun çalışan işletmelerin ihtiyaç duyacağı özel modülleri de (Kartlı ve Yüz Okuma PDKS, Shift takibi, üniforma takibi ve zimmeti, personel servisi, cihaz zimmet, eğitim, performans denetimi) barındırmaktadır.  Programın bulut yapısı, kanunen değişmesi gereken tüm parametrelerin otomatik alınmasını ve resmi mevzuatın yakinen takip edilebilmesine olanak sağlar</p>
+            <br />
+            <p>Elektraweb İK Web Tabanlı İnsan Kaynakları Programı ile;</p>
+            <ol>
+                <li>Personelinizin devamlılık durumlarını online olarak izleyebilir ve izin, avans gibi istemlerinin web üzerinden yapılabilmesini sağlayabilirsiniz</li>
+                <li>İş başvurularını online olarak alabilir, program içinde saklayabilir ve sonradan kullanıma açabilirsiniz</li>
+                <li> Performans değerlendirmelerini bölüm şefleri ve müdürlerinin katılımı ile online yapabilirsiniz</li>
+                <li>Personel ödemelerini bankalara otomatik olarak iletebilirsiniz</li>
+                <li> Resmi tebligatların iletilmesi (PEYK Entegrasyonu) ve en önemlisi verilerin KVKK ya uygun bir şekilde saklanması ve korunmasını sağlayabilirsiniz</li>
+                <li> Bordrolama sürecini ve Jandarma Kimlik Bildirimi gibi işlemleri çok hızlı tamamlayabilirsiniz</li>
+            </ol><br /><br />
+            <center><h3 style="color:red;">Sicil Kartı İşlemleri</h3></center>
+            <img src="resimler/sicil-karti-islemleri.png" class="img-fluid" />
+            <ul>
+                <li>Sicil kartları herhangi bir kritere göre listelenebilir, sıralanabilir, gruplanabilir ve filtrelenebilir.</li>
+                <li>Tüm ekranlar, excel’e veya yazıcıya aktarılabilir.</li>
+                <li>Sicil kartından tek tuşla bordro oluşturulabilir ve bordro ekranına geçiş yapılabilir.</li>
+                <li>Tek tuşla SGK İşe Giriş ve İşten Ayrılış bildirgeleri verilebilir ve SGK dokümanı PDF olarak indirilebilir.</li>
+                <li>İşe giriş ve ayrılış sürecindeki raporlamalara yazdır ekranından kolayca ulaşılabilir.</li>
+            </ul><br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Sicil Kartı</h3></center>
+            <center><img src="resimler/sicil-karti.png" class="img-fluid" /></center>
+            <br />
+            <ul>
+                <li>Personele ait tüm bilgilere kart içerisinden kolayca ulaşılabilir.  </li>
+                <li>İzin işlemleri , İcra ve Avans takibi, Aşı Takibi, Zimmet Takibi yapılabilir.</li>
+                <li>Personele ait belge ve dokümanlar saklanabilir.</li>
+                <li>Eğitim modülünde girilen eğitimler personelin kartında görüntülenebilir.</li>
+                <li>Yıllık izin, ücretli izin ve ücretsiz izin girişi yapılabilir, Yıllık izin takibi yapılabilir, tarihlerine göre personellerin bordrolarına otomatik puantaj oluşturulabilir.</li>
+            </ul><br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Aylık Parametreler</h3></center>
+            <center><img src="resimler/aylik-parametreler.png" class="img-fluid" /></center>
+            <p>Bordroların oluşturulması için gerekli olan, SGK’ nın belirlediği; Taban ve Tavan Ücretler, Vergi Dilimleri, Sakatlık İndirimleri gibi alanlar tek tuşla çekilebilir. Emekli ve Normal Bordrolara ait vergi parametre bilgileri otomatik oluşturulabilir. Oluşturulan parametrelere, standart puantajlar girilerek, bordro oluşturma tarihini içeren parametrelerden otomatik olarak gün sayıları bordroya işlenebilir.Firma bazlı olarak parametre oluşturulabilir.</p>
+
+            <br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Bordrolar</h3></center>
+            <center><img src="resimler/bordrolar.png" class="img-fluid" /></center>
+            <ul>
+                <li>Personellere ait puantaj bilgilerine göre bordro hazırlayabilir, Ek kazançlar eklenebilir.</li>
+                <li>Personelin, aylık, günlük, saatlik ücret üzerinden netten brüte, brütten nete maaş tahakkukları yapılabilir.</li>
+                <li>Firmanın çalışmakta olduğu banka için, banka maaş ödeme listesi alınabilir.</li>
+            </ul><br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Muhtasar</h3></center>
+            <center><img src="resimler/muhtasar.png" class="img-fluid" /></center>
+            <ul>
+                <li>Muhtasar beyanname otomatik txt dosyası hazırlanabilir.</li>
+
+            </ul>
+            <br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Shift</h3></center>
+            <center><img src="resimler/shift.png" class="img-fluid" /></center>
+            <ul>
+                <li>Personel shift tanımlarınızı yapabilir ve raporlayabilirsiniz.</li>
+                <li>Departman müdürleri, shift kullanıcıları ile giriş yapıp, kendi departmanına ait personellerin, shift tanımlarını yapabilir.</li>
+                <li>Haftalık veya Aylık olarak görüntülenebilmektedir.</li>
+                <li>Toplu olarak bir departmana shift atanabilir.</li>
+            </ul>
+            <br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Eğitimler</h3></center>
+            <center><img src="resimler/personel-egitim-programi.png" class="img-fluid" /></center>
+            <ul>
+                <li>Eğitim tanımları yapılıp, katılacak personellerin seçimi yapılarak, rapor alınabilir. Aktarılan personellerin eğitimleri, otomatik olarak sicil kartlarından görüntülenebilir.</li>
+            </ul><br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Cv</h3></center>
+            <center><img src="resimler/cv.png" class="img-fluid" /></center>
+            <ul>
+                <li>Web siteniz üzerinden, iş başvurusu alarak, başvuruları CV ekranına otomatik olarak kayıt olması sağlanabilir.</li>
+                <li>Bu bilgiler ile personel işe alımı gerçekleşir ise, sicil kartını oluşturabilirsiniz.</li>
+            </ul><br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">İzin Talebi</h3></center>
+            <center><img src="resimler/izin-talebi.png" class="img-fluid" /></center>
+            <ul>
+                <li>Çalışan personeller kendilerine ait kullanıcı bilgileri ile kolaylık ile istedikleri tarih aralıklarında izin talep edebilir,</li>
+                <li>Personellerin yöneticileri belirli bir onay süreci dahilinde izini işleme alabilirler.</li>
+                <li>İzin onay süreci firma tarafından kolaylıkla düzenlenebilir.</li>
+            </ul>
+            <br />
+            <hr />
+            <br />
+            <center><h3 style="color:red;">Turnover</h3></center>
+            <center><img src="resimler/turnover.png" class="img-fluid" /></center>
+            <ul>
+                <li>İş Gücü Devir Oranı (Turnover), belirli bir ay veya yıl içinde işletmeden ayrılan, işe giren personelleri ve bu personellerin</li>
+                <li>Çalışma sürelerini oranlayan rapordur.</li>
+                <li>Bu rapor sisteminde turnover ne kadar düşükse o kadar şirketin çalışan verimliliği o kadar yüksek anlamına gelmektedir.</li>
+                <li>Elektra İnsan Kaynakları Programında, grafiksel olarak departmanların ve firmaların verimliliği hesaplanabilir.</li>
+                <li>Turnover raporu ile; Çalışma süreleri,Departman bazlı çalışanların devir oranı,</li>
+                <li>Departman bazlı işten ayrılma ve işe giriş oranı gibi, işletmenin çalışan performansı alınabilir.    </li>
+            </ul>
+        </div>
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>

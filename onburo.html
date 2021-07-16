@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+
+        body {
+            margin: 0px;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #4fb99f;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 1px 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+            ul li a {
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+                border-left: 5px solid #4fb99f;
+            }
+
+                ul li a.active {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+                ul li a:hover:not(.active) {
+                    background-color: #068587;
+                    border-left: 5px solid #f2b134;
+                }
+
+        .sola {
+            float: left;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <script>
+        /* menü ikonuna tıklandığında responsive css sınıfının menüye uygulanması, uygulanmış ise de iptal edilmesi */
+        function myFunction() {
+            var x = document.getElementById("ustMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div style="height:20px; width:auto;"></div>
+    <div style="height:auto; width:auto; background-color:black;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div style="height:auto; width:auto; background-color:transparent;">
+                <a href="Anasayfa.html">
+                    <img src="resimler/logo.png" style="height:auto; width:auto;" class="img-fluid" />
+                </a>
+            </div>
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button><pre>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" href="ustunlukleri.html">Üstünlükleri Nelerdir<span class="sr-only">(current)</span></a>
+       
+         
+            <a class="nav-link" href="onburo.html">Modülleri</a>
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+      
+    </div>
+  </div></pre>
+        </nav>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onburo.html">Ön Büro Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="pos.html">Restoran POS Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="etsweb.html">Stok ve Maliyet Analizi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="muhasebeyonetimi.html">Muhasebe Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="efaturaarsiv.html">e-Fatura, e-Arşiv, e-Defter</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satinalmamod.html">Satın Alma Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="amortisman.html">Demirbaş ve Amortisman Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="insankaynaklari.html">Elektraweb İnsan Kaynakları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="channelmanager.html">Kanal Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="temassizmisafirkarti.html">Temassız Misafir Uygulamaları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinerezervasyonmodulu.html">Online Rezervasyon Motoru</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="fiyatyonetim.html">Fiyat Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="onlinepaketsparis.html">Online Paket Sipariş Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="spasporyonetim.html">SPA ve Spor Salonu Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="isafe.html">iSafe İnternet Güvenlik ve Loglama Sistemi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="kimlikokur.html">Kimlikokur Kimlik ve Pasaport Okuma</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiriliskileri.html">CRM ve Misafir İlişkileri</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="satisprojeleribanketyonetim.html">Satış Projeleri ve Banket Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="misafiryorumsiteentegrasyon.html">Misafir Yorum Sitelerinin Entegrasyonu</a></li>
+
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sistementegrasyonu.html">Sistem Entegrasyonları</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="callsenterentegrasyon.html">Call Center & Satış CRM Entegrasyonu</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="yurtyonetim.html">Yurt Yönetim Programı</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="devretatilyonetim.html">Devremülk ve Devre Tatil Yönetimi</a></li>
+            <li><a class="list-group-item list-group-item-action" style="width:auto;" href="sadakatyonetim.html">Sadakat Yönetimi</a></li>
+        </ul>
+    </div>
+    <div class="container" style="padding-left:200px;">
+
+        <div style="height:20px; width:auto;"></div>
+        <div style="height:auto; width:auto; background-color:snow;">
+            <img src="resimler/onburo_slider.gif" class="img-fluid" />
+            <br />
+            <h3 style="color:red;"><b>Elektraweb Ön Büro Modülü</b></h3>
+            <p>Elektraweb Web Tabanlı Otel Programı Ön büro modülü ile rezervasyon, resepsiyon, housekeeping, fatura, folyo, channel manager, online rezervasyon, emniyet kimlik bildirimi gibi işlemleri rahatlıkla gerçekleştirebilir, ayrıntılı yönetim raporlarına tek tuşla ulaşabilirsiniz</p>
+            <img src="resimler/gunluk_durum_TR.jpg" class="img-fluid" />
+            <p>
+                Elektraweb Otel Yönetim Sistemi, “Günlük Durum Ekranı” ile doluluk, gelir, forecast, konaklayanlar, rezervasyonlar ilgili bilgiler ve hatta çağrı merkezi notları gibi otel hakkındaki tüm önemli ve kritik bilgileri tek bir ekranda sunar.
+
+                Kullanıcılar bu verileri hem grafikler hem de listeler halinde görür. Ayrıca, istenirse bu verilerin yenilenmesi ve görüntülenmesi için zaman aralığı ayarlanabilir.
+
+                Kullanıcılar, web tabanlı bulut yapısı nedeniyle Elektraweb Otel Yazılımı’na herhangi bir mobil cihazdan kolayca erişebilir. Bu, otel yönetimi ve personeline tesisteki aktiviteler hakkında isteğe bağlı bir genel bakış sunar.
+            </p>
+            <h4>Elektraweb Rezervasyon İşlemleri</h4>
+            <div style="width:auto;"><img src="resimler/REZLIST-2048x917.jpg" class="img-fluid" "       /></div>
+            <ul>
+                <li>Rezervasyonlar herhangi bir kritere göre tek tuşla listelenebilir, sıralanabilir, gruplanabilir ve filtrelenebilir</li>
+                <li>Renklendirmeler sayesinde dikkat edilmesi gereken bilgiler kolayca görülür</li>
+                <li>Tek tuşla tüm işlemlere ulaşılır, tekve/veya toplu olarak işlem yapılır</li>
+                <li>Tüm ekranlar farklı formatlarda Excel’e veya yazıcıya aktarılır</li>
+                <li>Listelerde çoklu sıralama, filtreleme, arama, gruplama standarttır</li>
+                <li>Dijital arşivleme yeteneği sayesinde tüm belgeler, ilgili kaydın içerisine saklanır</li>
+                <li>Kullanıcılar yetkilerine göre menüde ve formlarda sadece izin verilen bilgileri görebilir ve işlem yapabilir</li>
+            </ul>
+            <br /><br />
+            <h4>Rezervasyon Kartı</h4>
+            <div style="width:auto;"><img src="resimler/kart.png" class="img-fluid" /></div>
+            <ul>
+                <li>Rezervasyonla ilgili tüm detaylar bir arada</li>
+                <li>No more duplicates ! Misafir kontrol ile eski verilere ulaşım otomatik ve sınırsız profil açma – eşleme</li>
+                <li>Tek tuşla oda tipi müsaitliğine ulaşım.</li>
+                <li>Tek tuşla oda blokajı yapabilme.</li>
+                <li>Acenta detaylarına, fiyatlara, misafir bilgilerine, satış projelerine hızlı erişme.</li>
+                <li>Fiyatlandırma sekmesine ulaşım için yetki kontrolü; fiyatlandırma ile ilgili tüm veriler bir arada.</li>
+            </ul>
+
+            <br /><br />
+            <h4>Kat Hizmetleri</h4>
+            <div style="width:auto;"><img src="resimler/Kat_hizmetleri2.png" class="img-fluid" "       /></div>
+            <ul>
+                <li>Elektraweb Otel Programı ile tüm kat hizmetleri işlemleri dijital ortamda yapılabilir</li>
+                <li>Oda durumuna göre, eşit ağırlıklı olarak maid dağılımı yapabilirsiniz.</li>
+                <li>Kat Görevlisi ve Şef raporlarını alabilirsiniz.</li>
+            </ul>
+            <hr />
+            <br /><br />
+            <h4>Folyo İşlemleri</h4>
+            <div style="width:auto;"><img src="resimler/folyo1-2048x914.png" class="img-fluid" /></div>
+            <li>Ödeme, posting ve faturalama işlemleri aynı ekrandan tek tuşla yapılır; zaman kazandırır.</li>
+            <li>Aynı anda değişik para birimleri ile işlem girilebilir otomatik çevirim sağlar.</li>
+            <li>Oda hesabı sınırsız farklı pencerelerde görüntülenerek ödeme alınır, hesap girilir, fatura kesilir.</li>
+            <li>Detaylı ve farklı formattaki tasarımlarla istenilen formatta folyo çıktısı verir.</li>
+            <hr />
+            <br /><br />
+            <h4>Ön Muhasebe</h4>
+            <div style="width:auto;"><img src="resimler/onkasa.png" class="img-fluid" /></div>
+            <ul>
+                <li>İstenilen para biriminde işlem yapılabilir</li>
+                <li>Günlük harcamalar raporlanabilir.</li>
+                <li>Döviz bozma işlemleri hızlıdır.</li>
+                <li>Kasa raporu ayrıntılı ve kolay anlaşılırdır.</li>
+            </ul>
+            <br />
+            <div style="width:auto;"><img src="resimler/Fatura.png" class="img-fluid" /></div>
+            <br />
+            <ul>
+                ElektraWeb;
+                <li>cari hesap,</li>
+                <li>borç – alacak takibi,</li>
+                <li>kasa takibi,</li>
+                <li>personel hesap takibi,</li>
+                <li>fatura ve irsaliye düzenleme,</li>
+                <li>çek ve senetlerin vade takibi</li>
+                <p>gibi ön muhasebe işlemlerini kolaylıkla gerçekleştirmenizi sağlar.</p>
+                <p>E-Fatura ve E-Arşiv sistemleriyle uyumludur.</p>
+
+            </ul>
+            <hr />
+            <br /><br />
+            <h4>Forecast ve Analizler</h4>
+            <div style="width:auto;"><img src="resimler/forecast1.png" class="img-fluid" /></div>
+            <ul>
+                <li>İstenilen iki tarih arasındaki doluluk hareketlilik ve gelirleri grafik ve detaylı analizlerle gösterir.</li>
+                <li>Kullanımı çok kolaydır. grafikte bir günün üzerine tıklandığında o güne ait değişik listeleri otomatik hazırlar.</li>
+                <li>Rezervasyon kartına yazdığınız her detaya göre forecast alabilmenizi sağlar.</li>
+            </ul>
+            <hr />
+            <br /><br />
+            <h4>Blokaj</h4>
+            <div style="width:auto;"><img src="resimler/blokaj3.png" class="img-fluid" /></div>
+            <ul>
+                <li>Önbürodaki operasyonun tamamını (Rezervasyon, Checkin-Checkout, Folyo, Blokaj, Tahsilat) yapabileceğiniz şekilde tasarlanmıştır.</li>
+                <li>ElektraWeb Blokaj ekranından misafirin rezervasyon kartına ulaşabilir, sürükle bırak ile oda – tarih değiştirilebilir, tahsilat, chin/chout işlem girişi yapabilir, folyosuna gidebilirsiniz.</li>
+                <li>Online kanallardan gelen ve daha oda ataması yapılmamış rezervasyonlarınızı da blokajda en üstte görebilir, sürükle bırak ile oda verebilirsiniz.</li>
+                <li>Yine bu ekranda kanal yönetimi işlemleri yapılabilir ve POS bilgileri girilebilir.</li>
+            </ul>
+            <hr />
+            <br /><br />
+
+            <h4>Roomrack</h4>
+            <div style="width:auto;"><img src="resimler/Roomrack2-2048x1038.png" class="img-fluid" /></div>
+            <ul>
+                <li>Anlık oda durumları tek ekranda görüntülenebilir, temizlik ve doluluğa göre farklı renklerle işaretlenebilir</li>
+                <li>Gösterilen odalar filtrelenip girişlere, çıkışlara ve konaklayanlara kolaylıkla ulaşılabilir</li>
+                <li>Bu ekrandan çıkmadan seçilen oda üzerinde tahsilat, folyo ve check-out işlemleri yapılabilir</li>
+                <li>VIP, geç check-in ve check-outlar için kuyruktaki odalar görsel simgeler ile işaretlenebilir</li>
+            </ul>
+            <hr />
+            <br /><br />
+            <h3>Görev ve İş Yönetimi </h3>
+            <div style="width:auto;"><img src="resimler/Screen-Shot-2020-01-17-at-13.28.24.png" class="img-fluid" /></div>
+            <ul>
+                <li>Girilen tüm istek ve şikayetler otomatik görev yönetimine dahil olur. İşin tanımına göre, bölümü, yetkilisi, önemi ve beklenen bitiş süresi belirlenir.</li>
+                <li>İş, ilgili birimin ekranına veya mobil cihazına düşer. Çağrıyı alan görevli “göreve başla” tuşuna basarak başlar ve bittiğinde ise “tamamla” diyerek bitirir.</li>
+                <li>Eğer iş, planlanan ve/veya max zaman diliminde bitmez ise otomatik bir üste mesaj gider.</li>
+                <li>Misafir ile ilgili olan işlemler rezervasyon kartı içerisinden de takip edilir. İstenirse check-in, check-out,folyo ve faturalama işlemleri esnasında otomatik hatırlatma yapar.</li>
+                <li>VIP, setup ve ön ödeme kontrol gibi işlemler böylece hem hatırlatma hem de ilgili bölüme bir görev olarak tanımlanmış olur.</li>
+            </ul>
+            <hr />
+            <br /><br />
+            <ol>
+                <li>Otel veya otelleriniz için güvenli IP tanımlamalarını yapabilirsiniz. Sadece sizin izin verdiğiniz IP adreslerinden kullanıcılar giriş yapabilir.</li>
+                <li>Belli bir gün süreyle kullanılmayan şifreleri otomatik pasife alabilirsiniz.</li>
+                <li>Kullanıcılarınızı belli gün periyotlarında şifre değişimine zorlayabilirsiniz.</li>
+                <li>2FA kullanımını tüm otel kullanıcıları için zorunlu hale getirebilirsiniz.</li>
+                <li>Kullanıcı şifreleriniz minimum 8 karakter olmalı; mutlaka bir harf, sayı ve işaret içermelidir.</li>
+                <li> Kullanıcının sadece mesai saatleri içinde programı kullanmasını sağlayabilirsiniz.</li>
+                <li>Kullanıcının sadece bir ya da birden fazla IP’den giriş yapabilmesini sağlayabilirsiniz.</li>
+                <li>Bir kullanıcı için bir son kullanım tarihi belirleyebilirsiniz. Bu tarih geldiğinde şifre kullanımdan kaldırılır. Kullanıcı kesinlikle sisteme giriş yapamaz.</li>
+                <li>Kullanıcı en son ne zaman şifre değiştirmiş takip edebilirsiniz.</li>
+                <li>Sadece bir kullanıcı için 2FA kontrolünü açabilirsiniz. Belirlediğiniz IPler ile bağlandığında 2FA kontrolü yapmayıp, başka bir IP ile bağlandığında 2FA kontrolü sağlayabilirsiniz.</li>
+                <li>Bir kullanıcı ilk defa sisteme girdiğinde, kendi şifresini belirleyerek şifre değişimi yapması zorunludur.</li>
+                <li>Diğer hiçbir kullanıcı ya da sistem yöneticisi şifre bilgilerine ulaşamaz.</li>
+            </ol>
+        </div>
+    </div>
+    <div style="height:20px; width:auto;"></div>
+    <div style="width:auto; height:auto; background-color:dimgrey;">
+        <center><a href="https://www.facebook.com/elektrawebhotelmanagement" target="_blank"><img src="resimler/social-facebook-box-blue-icon.png" /><//a>  <a href="https://twitter.com/elektrawebhotel/" target="_blank"><img src="resimler/Twitter-icon.png" /></a>  <a href="https://www.instagram.com/elektraweb/" target="_blank"><img src="resimler/Logos-Instagram-icon.png" /></a>  <a href="https://www.youtube.com/c/ElektraWebHotelManagementSoftware" target="_blank"><img src="resimler/YouTube-icon.png" /></a>  <a href="https://www.linkedin.com/in/elektraweb/" target="_blank"><img src="resimler/Linkedin-icon.png" /></a>  </center>
+
+    </div>
+
+    <div style="height:10px; width:auto;"></div>
+    <style>
+        #onlyJSyc {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            border: none;
+            outline: none;
+            background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+            cursor: pointer;
+            padding: 0px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <button onclick="topFunction()" id="onlyJSyc"></button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+                document.getElementById("onlyJSyc").style.display = "block"
+            else
+                document.getElementById("onlyJSyc").style.display = "none"
+        }
+        function topFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.body.scrollTop -= 40
+                document.documentElement.scrollTop -= 40
+                setTimeout(function () {
+                    topFunction()
+                }, 0)
+            } else {
+                document.body.scrollTop = 0
+                document.documentElement.scrollTop = 0
+            }
+        }
+    </script>
+</body>
+</html>
